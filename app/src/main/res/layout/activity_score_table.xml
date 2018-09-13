@@ -4,15 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoreTable">
+    tools:context=".activities.ScoreTable"
+    tools:layout_editor_absoluteY="81dp">
+
 
     <TextView
+        android:id="@+id/count_roof_label"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Roof Scores:"
+        app:layout_constraintBottom_toTopOf="@+id/count_roof_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="checkBox2,one_colour_checkBox"
+        tools:layout_editor_absoluteX="384dp" />
+
+    <CheckBox
+        android:id="@+id/whole_roof_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Whole roof?"
+        app:layout_constraintBottom_toTopOf="@+id/one_colour_checkBox"
+        tools:layout_editor_absoluteX="84dp" />
+
+    <CheckBox
+        android:id="@+id/one_colour_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="If roof is in one colour?"
+        app:layout_constraintBottom_toTopOf="@+id/special_cards_checkBox"
+        tools:layout_editor_absoluteX="84dp" />
+
+    <CheckBox
+        android:id="@+id/special_cards_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Any special cards?"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <Button
+        android:id="@+id/count_roof_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Count"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <TextView
+        android:id="@+id/roof_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="208dp" />
 
 </android.support.constraint.ConstraintLayout>
