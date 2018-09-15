@@ -1,84 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ScoreTable"
-    tools:layout_editor_absoluteY="81dp">
+    android:orientation="vertical"
+    tools:context=".activities.ScoreTable">
 
 
     <TextView
         android:id="@+id/count_roof_label"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="140dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:text="Roof Scores:"
-        app:layout_constraintBottom_toTopOf="@+id/count_roof_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        app:constraint_referenced_ids="checkBox2,one_colour_checkBox"
-        tools:layout_editor_absoluteX="384dp" />
+        android:layout_margin="8dp"
+        android:text="@string/roof_scores" />
 
     <CheckBox
         android:id="@+id/whole_roof_checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Whole roof?"
-        app:layout_constraintBottom_toTopOf="@+id/one_colour_checkBox"
-        app:layout_constraintStart_toEndOf="@+id/count_roof_label" />
+        android:layout_margin="8dp"
+        android:text="@string/whole_roof" />
 
     <CheckBox
         android:id="@+id/one_colour_checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If roof is in one colour?"
-        app:layout_constraintBottom_toTopOf="@+id/special_cards_checkBox"
-        tools:layout_editor_absoluteX="84dp" />
+        android:text="@string/if_roof_is_in_one_colour"
+        android:layout_margin="8dp" />
 
-    <CheckBox
-        android:id="@+id/special_cards_checkBox"
+    <LinearLayout
+        android:id="@+id/count_windows_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
-        android:text="Any special cards?"
-        app:layout_constraintBottom_toTopOf="@+id/count_roof_button"
-        tools:layout_editor_absoluteX="84dp" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/count_roof_button"
+        <TextView
+            android:id="@+id/number_of_windows_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/how_many_windows" />
+
+        <EditText
+            android:id="@+id/windows_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="0"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="193dp"
-        android:text="Count"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/count_roof_button"
+            android:layout_width="83dp"
+            android:layout_height="49dp"
+            android:layout_margin="8dp"
+            android:text="@string/count" />
+
+        <TextView
+            android:id="@+id/roof_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintStart_toEndOf="@+id/count_roof_button" />
+
+    </LinearLayout>
+
 
     <TextView
-        android:id="@+id/roof_score_text"
+        android:id="@+id/count_rooms_label"
         android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/count_roof_button"
-        app:layout_constraintEnd_toEndOf="@+id/special_cards_checkBox"
-        app:layout_constraintTop_toTopOf="@+id/count_roof_button" />
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/rooms_scores" />
 
-</android.support.constraint.ConstraintLayout>
+
+
+
+</LinearLayout>

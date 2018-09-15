@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Games Point\'s Counter</string>
+    <string name="roof_scores">Roof Scores:</string>
+    <string name="whole_roof">Whole roof?</string>
+    <string name="if_roof_is_in_one_colour">If roof is in one colour?</string>
+    <string name="how_many_windows">How many windows?</string>
+    <string name="count">Count</string>
+    <string name="rooms_scores">Rooms scores:</string>
 </resources>

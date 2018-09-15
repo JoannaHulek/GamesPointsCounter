@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.apps.jo_hu.gamespointscounter.R;
@@ -32,9 +33,9 @@ public class ScoreTable extends AppCompatActivity {
 
         CheckBox wholeRoof = (CheckBox) findViewById(R.id.whole_roof_checkBox);
         CheckBox oneColour = (CheckBox) findViewById(R.id.one_colour_checkBox);
-        CheckBox specialCards = (CheckBox) findViewById(R.id.special_cards_checkBox);
+        EditText numberOfWindows = (EditText) findViewById(R.id.windows_et);
 
-        RoofScore roofScore = new RoofScore(wholeRoof.isChecked(), oneColour.isChecked(), specialCards.isChecked());
+        RoofScore roofScore = new RoofScore(wholeRoof.isChecked(), oneColour.isChecked(), Integer.valueOf(numberOfWindows.getText().toString()));
 
        return roofScore.getRoofScore();
     }
